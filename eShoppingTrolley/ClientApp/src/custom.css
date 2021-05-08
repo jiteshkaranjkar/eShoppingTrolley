@@ -1,0 +1,22 @@
+/* Provide sufficient contrast against white background */
+
+
+a {
+  color: #0366d6;
+}
+
+.layout {
+  background-color: #121212;
+}
+
+code {
+  color: #E01A76;
+}
+.navbar-custom {
+  height: 60px;
+}
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}

@@ -1,0 +1,31 @@
+﻿a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+  font-size: larger;
+  font-weight: bold;
+}
+
+.navbar {
+  max-height: 80px;
+}
+
+.nav-item {
+  margin-top : 10px;
+  font-size : medium;
+  font-weight :bold;
+}
+
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}

@@ -1,0 +1,28 @@
+﻿.grid-container {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 250px 250px 250px 250px;
+  grid-template-rows: 500px;
+  column-gap: 30px;
+  row-gap: 50px;
+}
+
+.main {
+  display: inline;
+}
+
+h1 {
+  display: inline;
+}
+
+h3 {
+  display: inline;
+}
+
+PromotionAccordians {
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin: auto;
+  display: flex;
+  flex: 1;
+}
