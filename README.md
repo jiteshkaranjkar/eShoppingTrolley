@@ -1,7 +1,8 @@
 ﻿# Basic Shopping Trolley(Cart) application for drinks built using .NET Core with React
 An experimental online shopping trolley project using C# .NET Core, React, JavaScript, Materail-ui, HTML5, CSS3
 
-![alt tag](https://raw.githubusercontent.com/mrjcka/Simple-.NET-MVC-5-Shopping-Cart/master/demo.PNG)
+![alt tag](https://github.com/jiteshkaranjkar/eShoppingTrolley/blob/master/ProductsScreen.png)
+![alt tag](https://github.com/jiteshkaranjkar/eShoppingTrolley/blob/master/ShoppingTolleyScreen.png)
 
 ## Installation
 
