@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router';
 import { Layout } from './components/Layout';
-import Home from './components/Home';
+import { Home } from './components/Home';
 import Products from './components/Products';
 import ShoppingTrolley from './components/ShoppingTrolley';
 import CartWithBadge from './components/controls/CartWithBadge';
@@ -42,7 +42,7 @@ export class App extends Component {
       }
     });
 
-    const response = await fetch("https://localhost:44364/api/ShoppingTrolley");
+    const response = await fetch("https://shoppingtrolley.azurewebsites.net/api/ShoppingTrolley");
     const result = await response.json();
     this.setState(() => {
       return {
@@ -61,6 +61,7 @@ export class App extends Component {
           <p><em>Loading...</em></p>
           :
           <div>
+            <Route exact path='/' component={Home} />
             <Route path='/products' component={Products}>
               <Products onUpdateCount={this.updateCount} trolleys={this.state.trolleys} />
             </Route>

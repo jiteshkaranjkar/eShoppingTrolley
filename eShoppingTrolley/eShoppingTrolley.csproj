@@ -7,6 +7,7 @@
     <IsPackable>false</IsPackable>
     <SpaRoot>ClientApp\</SpaRoot>
     <DefaultItemExcludes>$(DefaultItemExcludes);$(SpaRoot)node_modules\**</DefaultItemExcludes>
+    <UserSecretsId>d58a2e7e-fe58-438d-8e58-4c5b4eb9a97c</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -25,10 +26,6 @@
     <ProjectReference Include="..\eShoppingTrolley.Application\eShoppingTrolley.Services.csproj" />
     <ProjectReference Include="..\eShoppingTrolley.Domain\eShoppingTrolley.Domain.csproj" />
     <ProjectReference Include="..\eShoppingTrolley.Repository\eShoppingTrolley.Repository.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="ClientApp\src\data\" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

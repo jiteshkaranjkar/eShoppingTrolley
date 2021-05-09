@@ -1,0 +1,21 @@
+﻿.root {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  margin: auto;
+  overflow: hidden;
+}
+
+.gridList {
+  flex-wrap: nowrap;
+  transform: translateZ(0);
+}
+img {
+  border-radius: 5%;
+}
+
+.box-shadow {
+  box-shadow: 3px 3px 5px 6px white;
+}
