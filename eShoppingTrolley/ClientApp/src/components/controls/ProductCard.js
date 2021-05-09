@@ -1,7 +1,7 @@
 ﻿import React, { useEffect, useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Card, CardHeader, CardMedia, CardContent, CardActions } from '@material-ui/core';
-import { IconButton, Typography, Button, TextField } from '@material-ui/core';
+import { IconButton, Typography, Button, TextField, Box } from '@material-ui/core';
 import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
 import RemoveCircleOutlineIcon from '@material-ui/icons/RemoveCircleOutline';
 import ImageC from '../../data/Coopers.jpg';
@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: 350,
     minHeight: 480,
     maxHeight: 600,
-    boxShadow: '3px 3px 5px 6px #ccc',
+    boxShadow: '3px 3px 5px 6px #90caf9',
   },
   ellipsis: {
     textOverflow: 'ellipsis',
@@ -146,12 +146,16 @@ const ProductCard = (props) => {
         </div>
         <div style={{ display: "flex" }} className={classes.cardActions}>
           <Typography variant="subtitle2" color="inherit" noWrap>
-            {props.shoppingItem.product.promotion}
+            <Box color="warning.main">
+              {props.shoppingItem.product.promotion}
+            </Box>
           </Typography>
         </div>
         <div style={{ display: "flex" }} className={classes.cardActions}>
           <Typography variant="subtitle2" color="inherit" noWrap>
-            {props.shoppingItem.product.promotionDescription}
+            <Box color="warning.main">
+              {props.shoppingItem.product.promotionDescription}
+            </Box>
           </Typography>
         </div>
       </CardContent>
@@ -169,7 +173,7 @@ const ProductCard = (props) => {
           Add to cart
         </Typography>
       </Button>
-    </Card>
+    </Card >
   );
 }
 

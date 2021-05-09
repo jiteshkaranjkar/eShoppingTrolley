@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
   },
   table: {
     minWidth: 700,
-    boxShadow: '5px 5px 5px 6px #ccc',
+    boxShadow: '3px 3px 5px 6px #90caf9',
   },
   icons: {
     marginTop: 0
@@ -48,15 +48,10 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const ShoppingTrolley = ({ onUpdateCount, trolleys, promotion }) => {
-  const [currentCount, setCurrentCount] = useState(0);
-  const [loading, setLoading] = useState(true);
-  const [subTotalValue, setSubTotalValue] = useState(0);
-  const [totalValue, setTotalValue] = useState(0);
   const classes = useStyles();
   const [finalTrolley, setFinalTrolley] = useState([]);
 
   useEffect(() => {
-    setCurrentCount(Number(localStorage.getItem("totalCount")));
     getShoppingItemsInTrolley();
   }, []);
 
@@ -151,7 +146,7 @@ const ShoppingTrolley = ({ onUpdateCount, trolleys, promotion }) => {
   const calculateDiscount = () => {
     let subTotal = Number(getSubTotal());
     if (subTotal >= 50) {
-      return -5;
+      return 5;
     }
     return 0;
   }
@@ -311,7 +306,7 @@ const ShoppingTrolley = ({ onUpdateCount, trolleys, promotion }) => {
         {
           finalTrolley.length === 0
             ?
-            <p>Your shopping cart is currently empty. Why not take advantage of our latest offers below.</p>
+            <p>Your shopping trolley is currently empty. Why not take advantage of our most popular Beers.</p>
             :
             renderShoppingCart()
         }

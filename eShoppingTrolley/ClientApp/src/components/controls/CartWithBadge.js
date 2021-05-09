@@ -7,7 +7,7 @@ const CartWithBadge = ({ count }) => {
   return (
     <IconButton aria-label="cart">
       <Badge badgeContent={count} color="secondary">
-        <ShoppingCartIcon />
+        <ShoppingCartIcon style={{ fontSize: 30 }} />
       </Badge >
     </IconButton>
   );

@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using eShoppingTrolley.Domain.Entities;
+﻿using eShoppingTrolley.Domain.Entities;
 using eShoppingTrolley.Repository.Context;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace eShoppingTrolley.Repository
 {
@@ -15,5 +15,7 @@ namespace eShoppingTrolley.Repository
     }
 
     public List<Product> GetAllProducts() => _context.Products.Local.ToList();
+
+    public Product GetProductById(int id) => _context.Products.Where(prod => prod.Id == id).FirstOrDefault();
   }
 }
