@@ -25,9 +25,57 @@ Shopping Trolley feature
 - Application deployed in Azure (pending)
 - Have built a dashboard to monitor services and application (pending)
 
+## Application Results
 Application structure results in following:
 - Independent of Frameworks - Core should not be dependent on external frameworks such as Entity Framework
 - Testable - The logic within Core can be tested independently of anything external, such as UI, databases, servers. Without external dependencies, the tests are very simple to write.
 - Independent of UI - It is easy to swap out the Web UI for a Console UI, or Angular for Vue. Logic is contained within Core, so changing the UI will not impact logic.
 - Independent of Database - Initially you might choose SQL Server or Oracle, but soon we will all be switching to Cosmos DB
 - Independent of anything agency - Core simply doesn't know anything about the outside world
+
+## Trolley Use Cases
+### User Story 1:
+		As a customer I want to add / remove items to the trolley so that I can purchase the drinks I want
+		Acceptance Criteria:
+			1. Customers can add the same item more than once. For MVP, there is no upper limit	on the number of items or quantity they add
+			2. When customer adds an item to the trolley, they can see the count of items	incremented
+				a. Given customer has no item in the trolley
+				b. When they add the first item
+				c. Then the trolley count shows 1
+			3. When Customer removes item from the trolley, the count of items is decremented
+				a. Given customer has 1 item in the trolley
+				b. When they remove that item from the trolley
+				c. Then the trolley count shows
+
+### User Story 2:
+		As a customer when I view trolley, I want to see all the items I have added and the price of each item in the trolley so that I can see what I am paying for each item
+			1. For each item show the product name and sale price
+				Given “Jacob's Creek Classic Sauvignon Blanc” has a sale price of $7.95 is in the trolley
+				When I view the trolley
+				Then I want to see a sale price of Jacob's Creek Classic Sauvignon Blanc and $7.95
+
+### User Story 3:
+		As a customer when I view trolley, I want to see the total price of my trolley so that I know what I am paying
+			1. Add up the item price and display total price
+				Given I have items “Jacob's Creek Classic Sauvignon Blanc” with a sale price of $7.95, “Tread Softly Pinot Noir” with sale price of $13.60 and “Coopers Original Pale Ale Bottle” with sale price of $4.69 in the trolley
+				When I view the trolley
+				Then I want to see a total price of $26.24
+
+### Promotion Use Cases:
+		The business is facing competitive challenges and wants to run promotions to attract customers. Promotions can be a product promotion (at item level, for example, $1 off the price, 5% off the price) or at a trolley promotion (for example, multi-buy-promotions such as buy one get one free, buy one get second one for half price, spend and save promotions such as spend $50 and get $10 off). We need to be able to show the promotion price ($discount and $ saved) for each item in the trolley and the total discount and total savings on the trolly. The user stories are as follows
+
+### User Story 4:
+		As a customer when I view trolley, I want to see the discounted price if there are any discounts for each item in the trolley so that I know what I am paying for each item after the discount
+			1. For each item, show discounted price along with sale price
+				Given trolley has “Marlborough Sounds Pinot Noir bottle” with sale price of $19.99 and a product promotion is running that gives $2.00 off and “Pepperjack Barossa Shiraz” has a sale price of $25.00 and a product promotion gives 10% off
+				When I view the trolley
+				Then I want to see against the first item sale price of $19.99 and a discounted price of $17.99
+				And against item 2, a sale price of $25.00 and a discounted price of $22.50
+
+### User Story 5:
+		As a customer when I view trolley, I want to see the total price of my trolley and the discounted price after all discount have been applied so that I know what I am paying and what benefit I am getting
+			1. Apply all product level discounts, then apply trolley level discounts, subtract this from the total sale price to get the discounted price
+				Given trolley has one “Marlborough Sounds Pinot Noir bottle” with sale price of $19.99 and a product promotion is running that gives $2.00 off, two “Baily & Baily Queen Bee Sticky” which has a sale price of $12.00 and a promotion of buy one and get 20% off the second
+				When I view the trolley
+				Then I want to see a total sale price of $43.99 and discounted price of $39.59
+
