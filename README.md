@@ -16,10 +16,10 @@ eShopping Trolley is a Single Page Application to demostrate the use case scenar
 
 ## Application Screenshots
 - Products Screen - List all four products, add/remove to the trolley
-![alt tag](https://github.com/jiteshkaranjkar/eShoppingTrolley/blob/master/ProductsScreen.png)
+![alt tag](https://github.com/jiteshkaranjkar/ShoppingTrolley/blob/master/ProductsScreen.png)
 
 - Shopping Trolley Screen - showcasing all the products added with offers, price, discounted and total sale price
-![alt tag](https://github.com/jiteshkaranjkar/eShoppingTrolley/blob/master/ShoppingTolleyScreen.png)
+![alt tag](https://github.com/jiteshkaranjkar/ShoppingTrolley/blob/master/ShoppingTolleyScreen.png)
 
 ## Installation
 **Steps of installation**
@@ -31,7 +31,7 @@ eShopping Trolley is a Single Page Application to demostrate the use case scenar
 
 
 ## Features
-Shopping Trolley feature
+**Shopping Trolley features**
 - Screens - Home page, display Products and add to Trolley, Shopping Trolley with all Trolley details.
 - Built 5 different projects libraries
 - Presentation - responsible for the UI (i.e Client application - React SPA, Materail-UI) coordinated by controllers which execute around 5 different User stories.
@@ -39,8 +39,8 @@ Shopping Trolley feature
 - Services - Application Service layer which implements contracts and abstracts calls to Repository layer.
 - Repository - A Persitence layer with the idea of abstracting the data access concerns and option to use preferred data access technology. 
 - Tests - Unit Test using xUnit.net, Moq and InMemoryDatabase for more efficient unit testing and used TestHost for TestFixture. Unit test for React app is pending.
-- Application deployed in Azure - 
-- Have built a dashboard to monitor services and application (pending)
+- Application deployed in Azure (Done) - https://shoppingtrolley.azurewebsites.net/
+- Have built a dashboard to monitor services and application (Done).
 
 ## Application Results
 Application structure results in following:
