@@ -8,6 +8,7 @@ eShopping Trolley is a Single Page Application to demostrate the use case scenar
 - The user can then move onto the Products screen by clicking on the Products tab on the right hand side of the site. 
 - The Products screen at the moment has 4 sample products displayed. Each displayed product section has basic product details, product image, special offers if any, add/remove icon buttons and 'Add to cart' button (pending implementation).
 - For the current shopping experience the user can add or remove any number of product with no upper limit, and this numbers added eventually is updated on the Shopping Trolley icon on the menuabar top right hand side. This Shopping Trolley icon is pending implmentation.
+- By default the ShoppingTrolley screen will be empty untill unless some items have been added from Products screen.
 - Once the user has finalised the shopping they can move onto checkout screen by clicking on the Shopping Trolley tab on the menuabar top right hand side and reviewing the cart. 
 - The Shopping trolley page shows the summary of the products added, their quantities, the offers applied and the final amount to be paid. This is implemented as per the 5 User Stories defined below.
 - The user can navigate between the Home screen, product screen and the shopping trolley alternatively.
@@ -23,7 +24,11 @@ eShopping Trolley is a Single Page Application to demostrate the use case scenar
 ## Installation
 **Steps of installation**
 - Import project into Visual Studio (or alternative IDE Visual Studio Code)
-- Build the applciation and run (Visual Studio - preferably VS 2019 Community edition)
+- Build the Whoel eShoppingTrolley Solution, it will resolve backend and forntend dependencies. VS code need to have install depencies manually.
+- Select the Project in Presentation Folder i.e eShoppingTrolley project 
+- Run in Application (Visual Studio - preferably VS 2019 Community edition)
+- in VS code use dotnet run
+
 
 ## Features
 Shopping Trolley feature
@@ -33,8 +38,8 @@ Shopping Trolley feature
 - Domain - This is the Domain centric with no implementation and just Entities.
 - Services - Application Service layer which implements contracts and abstracts calls to Repository layer.
 - Repository - A Persitence layer with the idea of abstracting the data access concerns and option to use preferred data access technology. 
-- Tests - Unit Test using xUnit.net, Moq and InMemoryDatabase for more efficient unit testing and used TestHost for TestFixture.
-- Application deployed in Azure (pending)
+- Tests - Unit Test using xUnit.net, Moq and InMemoryDatabase for more efficient unit testing and used TestHost for TestFixture. Unit test for React app is pending.
+- Application deployed in Azure - 
 - Have built a dashboard to monitor services and application (pending)
 
 ## Application Results
