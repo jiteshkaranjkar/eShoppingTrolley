@@ -113,5 +113,6 @@ Application structure results in following:
 		Then I want to see a total sale price of $43.99 and discounted price of $39.59
 
 ## Test Data
-	All User stories are based on this test data and application is built using this test data
-	![Test Data](https://github.com/jiteshkaranjkar/eShoppingTrolley/blob/master/TestData.png)
+- All User stories are based on this test data and application is built using this test data
+![TestData](https://github.com/jiteshkaranjkar/eShoppingTrolley/blob/master/TestData.png)
+		     
