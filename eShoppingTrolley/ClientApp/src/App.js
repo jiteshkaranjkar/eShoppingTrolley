@@ -42,7 +42,7 @@ export class App extends Component {
       }
     });
 
-    const response = await fetch("https://shoppingtrolley.azurewebsites.net/api/ShoppingTrolley");
+    const response = await fetch("https://tgifdrinks.azurewebsites.net/api/ShoppingTrolley");
     const result = await response.json();
     this.setState(() => {
       return {

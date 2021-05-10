@@ -1,25 +1,42 @@
 ﻿# Basic Shopping Trolley(Cart) application for drinks built using .NET Core with React
 An basic online Shopping Trolley project using C#, .NET Core, React, JavaScript, Materail-ui, HTML5, CSS3, xUnit.net, Moq and InMemoryDatabase for more efficient unit testing.
 
-Application is hosted in Azure - https://shoppingtrolley.azurewebsites.net/
+Application is hosted in Azure - https://tgifdrinks.azurewebsites.net/
 
-eShopping Trolley is a Single Page Application to demostrate the use case scenario mentioned below. 
+## Table of contents
+<!--ts-->
+   * [Status and Usage](#status-and-usage)
+   * [Application Screenshots](#application-screenshots)
+   * [Installation](#installation)
+   * [Features](#features)
+   * [Application Results](#application-results)
+	 * [Trolley User Stories](#trolley-user-stories)
+	 * [Test Data](#test-data)
+   * [Tests](#tests)
+   * [Dependency](#dependency)
+   * [Docker](#docker)
+     * [Local](#local)
+     * [Public](#public)
+<!--te-->
+
+## Status and Usage
+eShoppingTrolley is a Single Page Application to demostrate the use case scenario mentioned below. 
 - The user journey starts with Landing Page with an image which can be enhanced in many ways (like using carousels).
-- The user can then move onto the Products screen by clicking on the Products tab on the right hand side of the site. 
+- The user can then move onto the Products screen by clicking on the Products menu button on the right hand side of the site. 
 - The Products screen at the moment has 4 sample products displayed. Each displayed product section has basic product details, product image, special offers if any, add/remove icon buttons and 'Add to cart' button (pending implementation).
-- For the current shopping experience the user can add or remove any number of product with no upper limit, and this numbers added eventually is updated on the Shopping Trolley icon on the menuabar top right hand side. This Shopping Trolley icon is pending implmentation.
+- For the current shopping experience the user can add or remove any number of product with no upper limit, and this numbers added eventually is updated on the Trolley menu button on the menuabar top right hand side. This Trolley menu button is pending implmentation.
 - By default the ShoppingTrolley screen will be empty untill unless some items have been added from Products screen.
-- Once the user has finalised the shopping they can move onto checkout screen by clicking on the Shopping Trolley tab on the menuabar top right hand side and reviewing the cart. 
-- The Shopping trolley page shows the summary of the products added, their quantities, the offers applied and the final amount to be paid. This is implemented as per the 5 User Stories defined below.
-- The user can navigate between the Home screen, product screen and the shopping trolley alternatively.
+- Once the user has finalised the shopping they can move onto checkout screen by clicking on the Trolley button on the menuabar top right hand side and reviewing the cart. 
+- The Trolley page shows the summary of the products added, their quantities, the offers applied and the final amount to be paid. This is implemented as per the 5 User Stories defined below.
+- The user can navigate between the Home, Products and the Trolley alternatively.
 
 
 ## Application Screenshots
 - Products Screen - List all four products, add/remove to the trolley
-![alt tag](https://github.com/jiteshkaranjkar/ShoppingTrolley/blob/master/ProductsScreen.png)
+![Products Screen](https://github.com/jiteshkaranjkar/eShoppingTrolley/blob/master/ProductsScreen.png)
 
-- Shopping Trolley Screen - showcasing all the products added with offers, price, discounted and total sale price
-![alt tag](https://github.com/jiteshkaranjkar/ShoppingTrolley/blob/master/ShoppingTolleyScreen.png)
+- Trolley Screen - showcasing all the products added with offers, price, discounted and total sale price
+![Trolley Screen](https://github.com/jiteshkaranjkar/eShoppingTrolley/blob/master/ShoppingTolleyScreen.png)
 
 ## Installation
 **Steps of installation**
@@ -31,15 +48,15 @@ eShopping Trolley is a Single Page Application to demostrate the use case scenar
 
 
 ## Features
-**Shopping Trolley features**
-- Screens - Home page, display Products and add to Trolley, Shopping Trolley with all Trolley details.
+**Shopping Trolley feature**
+- Screens - Home, Products and Trolley.
 - Built 5 different projects libraries
 - Presentation - responsible for the UI (i.e Client application - React SPA, Materail-UI) coordinated by controllers which execute around 5 different User stories.
 - Domain - This is the Domain centric with no implementation and just Entities.
 - Services - Application Service layer which implements contracts and abstracts calls to Repository layer.
 - Repository - A Persitence layer with the idea of abstracting the data access concerns and option to use preferred data access technology. 
 - Tests - Unit Test using xUnit.net, Moq and InMemoryDatabase for more efficient unit testing and used TestHost for TestFixture. Unit test for React app is pending.
-- Application deployed in Azure (Done) - https://shoppingtrolley.azurewebsites.net/
+- Application deployed in Azure (Done) - https://tgifdrinks.azurewebsites.net/
 - Have built a dashboard to monitor services and application (Done).
 
 ## Application Results
@@ -50,7 +67,7 @@ Application structure results in following:
 - Independent of Database - Initially you might choose SQL Server or Oracle, but soon we will all be switching to Cosmos DB
 - Independent of anything agency - Core simply doesn't know anything about the outside world
 
-## Trolley Use Cases
+## Trolley User Stories
 ### User Story 1:
 -As a customer I want to add / remove items to the trolley so that I can purchase the drinks I want
 	Acceptance Criteria:
@@ -96,3 +113,6 @@ Application structure results in following:
 		When I view the trolley
 		Then I want to see a total sale price of $43.99 and discounted price of $39.59
 
+## Test Data
+	All User stories are based on this test data and application is built using this test data
+	![Test Data](https://github.com/jiteshkaranjkar/eShoppingTrolley/blob/master/Test%20Data.png)
