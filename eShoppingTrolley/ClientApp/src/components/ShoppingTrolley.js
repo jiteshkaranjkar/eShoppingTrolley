@@ -212,7 +212,7 @@ const ShoppingTrolley = ({ onUpdateCount, trolleys, promotion }) => {
                   <IconButton onClick={() => removeItem(trolley.product.id, trolley.quantity)} className="align-self-center" disabled={trolley.quantity === 0 ? true : false}>
                     <RemoveCircleOutlineIcon style={{ fontSize: 25 }} color="action" aria-label="remove" className={classes.icons} />
                   </IconButton>
-                  <TextField value={trolley.quantity} variant="outlined" style={{ width: "50px", height: "50px" }} />
+                  <TextField value={trolley.quantity} variant="outlined" style={{ width: "60px", height: "50px", cursor: "none" }} />
                   <IconButton onClick={() => addItem(trolley.product.id, trolley.quantity)} className="align-self-center">
                     <AddCircleOutlineIcon style={{ fontSize: 25 }} color="action" aria-label="add" className={classes.icons} />
                   </IconButton>

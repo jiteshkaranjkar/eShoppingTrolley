@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { Collapse, Container, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import { Typography, Button } from '@material-ui/core';
-import CartWithBadge from './controls/CartWithBadge';
+import Badge from '@material-ui/core/Badge';
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import './NavMenu.css';
 
 
@@ -32,7 +33,7 @@ const NavMenu = ({ count }) => {
               </NavItem>
               <NavItem>
                 <NavLink tag={Link} className="text-dark" to="/products">
-                  <Typography color="inherit" variant="h6" style={{ fontWeight: 750 }} >
+                  <Typography color="inherit" variant="h6" >
                     <Button color="inherit" style={{ fontWeight: 850 }}>Products</Button>
                   </Typography>
                 </NavLink>
@@ -40,12 +41,14 @@ const NavMenu = ({ count }) => {
               <NavItem>
                 <NavLink tag={Link} className="text-dark" to="/shopping-trolley">
                   <Typography color="inherit" variant="h6">
-                    <Button color="inherit" style={{ fontWeight: 850 }}>Trolley</Button>
+                    <Button color="inherit" style={{ fontWeight: 850 }}>
+                      Trolley
+                      <Badge badgeContent={count} color="secondary">
+                        <ShoppingCartIcon style={{ fontSize: 25 }} />
+                      </Badge >
+                    </Button>
                   </Typography>
                 </NavLink>
-              </NavItem>
-              <NavItem>
-                <CartWithBadge count={count} />
               </NavItem>
             </ul>
           </Collapse>

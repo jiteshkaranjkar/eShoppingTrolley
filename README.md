@@ -22,13 +22,12 @@ Application is hosted in Azure - https://tgifdrinks.azurewebsites.net/
 ## Status and Usage
 eShoppingTrolley is a Single Page Application to demostrate the use case scenario mentioned below. 
 - The user journey starts with Landing Page with an image which can be enhanced in many ways (like using carousels).
-- The user can then move onto the Products screen by clicking on the Products menu button on the right hand side of the site. 
+- The user can then move onto the Products screen by clicking on the Products menu button on the top right hand side of the menubar. 
 - The Products screen at the moment has 4 sample products displayed. Each displayed product section has basic product details, product image, special offers if any, add/remove icon buttons and 'Add to cart' button (pending implementation).
-- For the current shopping experience the user can add or remove any number of product with no upper limit, and this numbers added eventually is updated on the Trolley menu button on the menuabar top right hand side. This Trolley menu button is pending implmentation.
-- By default the ShoppingTrolley screen will be empty untill unless some items have been added from Products screen.
-- Once the user has finalised the shopping they can move onto checkout screen by clicking on the Trolley button on the menuabar top right hand side and reviewing the cart. 
+- For the current shopping experience the user can add or remove any number of product with no upper limit, and this numbers added eventually is updated on the Trolley menu button on the menuabar top right hand side.
+- By default the Trolley screen will be empty untill unless some items have been added from Products screen.
+- Once the user has finalised the shopping they can move onto Trolley screen by clicking on the Trolley button on the menuabar top right hand side and reviewing the cart. 
 - The Trolley page shows the summary of the products added, their quantities, the offers applied and the final amount to be paid. This is implemented as per the 5 User Stories defined below.
-- The user can navigate between the Home, Products and the Trolley alternatively.
 
 
 ## Application Screenshots
@@ -36,7 +35,7 @@ eShoppingTrolley is a Single Page Application to demostrate the use case scenari
 ![Products Screen](https://github.com/jiteshkaranjkar/eShoppingTrolley/blob/master/ProductsScreen.png)
 
 - Trolley Screen - showcasing all the products added with offers, price, discounted and total sale price
-![Trolley Screen](https://github.com/jiteshkaranjkar/eShoppingTrolley/blob/master/ShoppingTolleyScreen.png)
+![Trolley Screen](https://github.com/jiteshkaranjkar/eShoppingTrolley/blob/master/TrolleyScreen.png)
 
 ## Installation
 **Steps of installation**
@@ -115,4 +114,4 @@ Application structure results in following:
 
 ## Test Data
 	All User stories are based on this test data and application is built using this test data
-	![Test Data](https://github.com/jiteshkaranjkar/eShoppingTrolley/blob/master/Test%20Data.png)
+	![Test Data](https://github.com/jiteshkaranjkar/eShoppingTrolley/blob/master/TestData.png)

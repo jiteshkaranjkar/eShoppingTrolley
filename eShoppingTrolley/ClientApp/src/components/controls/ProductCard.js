@@ -163,7 +163,7 @@ const ProductCard = (props) => {
         <IconButton onClick={() => removeItem(props.shoppingItem.product.id, props.shoppingItem.quantity)} className="align-self-center" disabled={props.shoppingItem.quantity === 0 ? true : false}>
           <RemoveCircleOutlineIcon style={{ fontSize: 35 }} color="action" aria-label="remove" className={classes.icons} />
         </IconButton>
-        <TextField value={itemCount === null ? 0 : itemCount} variant="outlined" style={{ width: "50px", height: "50px" }} />
+        <TextField value={itemCount === null ? 0 : itemCount} variant="outlined" style={{ width: "60px", height: "50px", cursor: "none" }} />
         <IconButton onClick={() => addItem(props.shoppingItem.product.id, props.shoppingItem.quantity)} className="align-self-center">
           <AddCircleOutlineIcon style={{ fontSize: 35 }} color="action" aria-label="add" className={classes.icons} />
         </IconButton>

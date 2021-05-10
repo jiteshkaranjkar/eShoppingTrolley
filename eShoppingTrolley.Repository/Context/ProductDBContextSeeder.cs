@@ -43,7 +43,7 @@ namespace eShoppingTrolley.Repository.Context
         Name = CommonConstants.COOPERS_NAME,
         Type = "Pale Ale",
         Description = "One of Australia's finest family-brewed beers, Coopers Pale Ale is a crisp, cloudy and refreshing bottle-fermented Australian pale.",
-        Promotion = CommonConstants.TROLLEY_PROMOTIONAL_OFFER,
+        Promotion = CommonConstants.COOPERS_PROMOTIONAL_OFFER,
         PromotionDescription = "(Buy one and get one free)",
         ImageURL = CommonConstants.COOPERS_IMAGE_URL,
         Price = 20.49
