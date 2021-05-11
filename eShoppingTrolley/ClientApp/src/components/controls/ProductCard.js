@@ -131,7 +131,7 @@ const ProductCard = (props) => {
       {getCardMedia(props.shoppingItem.product)}
       <CardContent>
         <div style={{ display: "flex" }} className={classes.cardActions}>
-          <Typography variant="h4" noWrap>
+          <Typography variant="h4" noWrap gutterBottom >
             ${
               props.shoppingItem.product.promtionalPrice !== 0 ?
                 props.shoppingItem.product.promtionalPrice :
@@ -139,20 +139,20 @@ const ProductCard = (props) => {
             }
           </Typography>
           {props.shoppingItem.product.promtionalPrice !== 0 ?
-            <Typography variant="body1" color="inherit" noWrap>
+            <Typography variant="body1" color="inherit" noWrap gutterBottom >
               &nbsp; Was ${props.shoppingItem.product.price}
             </Typography>
             : ""}
         </div>
         <div style={{ display: "flex" }} className={classes.cardActions}>
-          <Typography variant="subtitle2" color="inherit" noWrap>
+          <Typography variant="subtitle2" color="inherit" noWrap gutterBottom >
             <Box color="warning.main">
               {props.shoppingItem.product.promotion}
             </Box>
           </Typography>
         </div>
         <div style={{ display: "flex" }} className={classes.cardActions}>
-          <Typography variant="subtitle2" color="inherit" noWrap>
+          <Typography variant="subtitle2" color="inherit" noWrap gutterBottom >
             <Box color="warning.main">
               {props.shoppingItem.product.promotionDescription}
             </Box>
