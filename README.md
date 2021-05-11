@@ -10,13 +10,8 @@ Application is hosted in Azure - https://tgifdrinks.azurewebsites.net/
    * [Installation](#installation)
    * [Features](#features)
    * [Application Results](#application-results)
-	 * [Trolley User Stories](#trolley-user-stories)
-	 * [Test Data](#test-data)
-   * [Tests](#tests)
-   * [Dependency](#dependency)
-   * [Docker](#docker)
-     * [Local](#local)
-     * [Public](#public)
+   * [Trolley User Stories](#trolley-user-stories)
+   * [Test Data](#test-data)
 <!--te-->
 
 ## Status and Usage
