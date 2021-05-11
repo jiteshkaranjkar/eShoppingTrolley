@@ -1,4 +1,4 @@
-﻿import React, { useEffect, useState } from 'react';
+﻿import React, { Fragment, useEffect, useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Card, CardHeader, CardMedia, CardContent, CardActions } from '@material-ui/core';
 import { IconButton, Typography, Button, TextField, Box } from '@material-ui/core';
@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
   media: {
     paddingTop: '56.25%', // 16:9
     height: '40px',
-    width: '50px',
+    width: '54px',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
@@ -67,6 +67,20 @@ const useStyles = makeStyles((theme) => ({
     height: 100,
     width: 50,
   },
+  '@media (max-width: 595px)': {
+    media: {
+      height: '30px',
+      width: '75px',
+      margin: 'auto'
+    },
+  },
+  '@media (max-width: 360px)': {
+    media: {
+      height: '30px',
+      width: '85px',
+      margin: 'auto'
+    },
+  },
 }));
 
 const ProductCard = (props) => {
@@ -86,17 +100,17 @@ const ProductCard = (props) => {
     let img;
     switch (product.id) {
       case 1:
-        img = ImageVB;
+      default:
+        img = ImageC;
         break;
       case 2:
         img = ImageCL;
         break;
       case 3:
-        img = ImageC;
+        img = ImageTED;
         break;
       case 4:
-      default:
-        img = ImageTED;
+        img = ImageVB;
         break;
     }
     return (
@@ -123,57 +137,60 @@ const ProductCard = (props) => {
 
 
   return (
-    <Card className={classes.root}>
-      <CardHeader className={classes.ellipsis}
-        title={props.shoppingItem.product.brand}
-        subheader={props.shoppingItem.product.type}
-      />
-      {getCardMedia(props.shoppingItem.product)}
-      <CardContent>
-        <div style={{ display: "flex" }} className={classes.cardActions}>
-          <Typography variant="h4" noWrap gutterBottom >
-            ${
-              props.shoppingItem.product.promtionalPrice !== 0 ?
-                props.shoppingItem.product.promtionalPrice :
-                props.shoppingItem.product.price
-            }
-          </Typography>
-          {props.shoppingItem.product.promtionalPrice !== 0 ?
-            <Typography variant="body1" color="inherit" noWrap gutterBottom >
-              &nbsp; Was ${props.shoppingItem.product.price}
-            </Typography>
-            : ""}
-        </div>
-        <div style={{ display: "flex" }} className={classes.cardActions}>
-          <Typography variant="subtitle2" color="inherit" noWrap gutterBottom >
-            <Box color="warning.main">
-              {props.shoppingItem.product.promotion}
-            </Box>
-          </Typography>
-        </div>
-        <div style={{ display: "flex" }} className={classes.cardActions}>
-          <Typography variant="subtitle2" color="inherit" noWrap gutterBottom >
-            <Box color="warning.main">
-              {props.shoppingItem.product.promotionDescription}
-            </Box>
-          </Typography>
-        </div>
-      </CardContent>
-      <CardActions disableSpacing className={classes.cardActions}>
-        <IconButton onClick={() => removeItem(props.shoppingItem.product.id, props.shoppingItem.quantity)} className="align-self-center" disabled={props.shoppingItem.quantity === 0 ? true : false}>
-          <RemoveCircleOutlineIcon style={{ fontSize: 35 }} color="action" aria-label="remove" className={classes.icons} />
-        </IconButton>
-        <TextField value={itemCount === null ? 0 : itemCount} variant="outlined" style={{ width: "60px", height: "50px", cursor: "none" }} />
-        <IconButton onClick={() => addItem(props.shoppingItem.product.id, props.shoppingItem.quantity)} className="align-self-center">
-          <AddCircleOutlineIcon style={{ fontSize: 35 }} color="action" aria-label="add" className={classes.icons} />
-        </IconButton>
-      </CardActions>
-      <Button variant="outlined" color="primary" className={classes.addToCart}>
-        <Typography variant="overline" display="block" style={{ fontWeight: 750 }} gutterBottom >
-          Add to cart
+    <Fragment>
+      <meta name="viewport" content="width=device-width,initial-scale=1"/>
+        <Card className={classes.root}>
+          <CardHeader className={classes.ellipsis}
+            title={props.shoppingItem.product.brand}
+            subheader={props.shoppingItem.product.type}
+          />
+          {getCardMedia(props.shoppingItem.product)}
+          <CardContent>
+            <div style={{ display: "flex" }} className={classes.cardActions}>
+              <Typography variant="h4" noWrap gutterBottom >
+                ${
+                  props.shoppingItem.product.promtionalPrice !== 0 ?
+                    props.shoppingItem.product.promtionalPrice :
+                    props.shoppingItem.product.price
+                }
+              </Typography>
+              {props.shoppingItem.product.promtionalPrice !== 0 ?
+                <Typography variant="body1" color="inherit" noWrap gutterBottom >
+                  &nbsp; Was ${props.shoppingItem.product.price}
+                </Typography>
+                : ""}
+            </div>
+            <div style={{ display: "flex" }} className={classes.cardActions}>
+              <Typography variant="subtitle2" color="inherit" noWrap gutterBottom >
+                <Box color="warning.main">
+                  {props.shoppingItem.product.promotion}
+                </Box>
+              </Typography>
+            </div>
+            <div style={{ display: "flex" }} className={classes.cardActions}>
+              <Typography variant="subtitle2" color="inherit" noWrap gutterBottom >
+                <Box color="warning.main">
+                  {props.shoppingItem.product.promotionDescription}
+                </Box>
+              </Typography>
+            </div>
+          </CardContent>
+          <CardActions disableSpacing className={classes.cardActions}>
+            <IconButton onClick={() => removeItem(props.shoppingItem.product.id, props.shoppingItem.quantity)} className="align-self-center" disabled={props.shoppingItem.quantity === 0 ? true : false}>
+              <RemoveCircleOutlineIcon style={{ fontSize: 35 }} color="action" aria-label="remove" className={classes.icons} />
+            </IconButton>
+            <TextField value={itemCount === null ? 0 : itemCount} variant="outlined" style={{ width: "60px", height: "50px", cursor: "none" }} />
+            <IconButton onClick={() => addItem(props.shoppingItem.product.id, props.shoppingItem.quantity)} className="align-self-center">
+              <AddCircleOutlineIcon style={{ fontSize: 35 }} color="action" aria-label="add" className={classes.icons} />
+            </IconButton>
+          </CardActions>
+          <Button variant="outlined" color="primary" className={classes.addToCart}>
+            <Typography variant="overline" display="block" style={{ fontWeight: 750 }} gutterBottom >
+              Add to cart
         </Typography>
-      </Button>
-    </Card >
+          </Button>
+        </Card >
+        </Fragment>
   );
 }
 

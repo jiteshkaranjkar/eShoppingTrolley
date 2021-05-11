@@ -8,7 +8,6 @@ import './NavMenu.css';
 
 
 const NavMenu = ({ count }) => {
-  //const [count, setCount] = useState(0);
   const [collapsed, setCollapsed] = useState();
 
   const toggleNavbar = () => {

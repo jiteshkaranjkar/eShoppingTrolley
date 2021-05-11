@@ -2,18 +2,6 @@
   white-space: normal;
   text-align: center;
   word-break: break-all;
-  font-size: larger;
-  font-weight: bold;
-}
-
-.navbar {
-  max-height: 60px;
-}
-
-.nav-item {
-  margin-top : 10px;
-  font-size : medium;
-  font-weight :bold;
 }
 
 html {

@@ -70,17 +70,17 @@ const ShoppingTrolley = ({ onUpdateCount, trolleys, promotion }) => {
   const getCardMedia = (product) => {
     switch (product.id) {
       case 1:
-        return ImageVB;
+      default:
+        return ImageC;
         break;
       case 2:
         return ImageCL;
         break;
       case 3:
-        return ImageC;
+        return ImageTED;
         break;
       case 4:
-      default:
-        return ImageTED;
+        return ImageVB;
         break;
     }
   }
