@@ -45,6 +45,11 @@ const useStyles = makeStyles((theme) => ({
   icons: {
     marginTop: 0
   },
+  ellipsis: {
+    textOverflow: 'ellipsis',
+    whiteSpace: 'nowrap',
+    overflow: 'hidden',
+  },
 }));
 
 const ShoppingTrolley = ({ onUpdateCount, trolleys, promotion }) => {
@@ -117,11 +122,11 @@ const ShoppingTrolley = ({ onUpdateCount, trolleys, promotion }) => {
 
   const getSubTotalQuantity = () => {
     var qty = 0;
-     finalTrolley.map((trolleyItem) => {
+    finalTrolley.map((trolleyItem) => {
       trolleyItem.map((item) => {
         qty += item.quantity;
       })
-     });
+    });
     return qty;
   }
 
@@ -208,7 +213,7 @@ const ShoppingTrolley = ({ onUpdateCount, trolleys, promotion }) => {
                     {trolley.product.name}
                   </Typography>
                 </TableCell>
-                <TableCell align="center">
+                <TableCell align="center" className={classes.ellipsis}>
                   <IconButton onClick={() => removeItem(trolley.product.id, trolley.quantity)} className="align-self-center" disabled={trolley.quantity === 0 ? true : false}>
                     <RemoveCircleOutlineIcon style={{ fontSize: 25 }} color="action" aria-label="remove" className={classes.icons} />
                   </IconButton>
