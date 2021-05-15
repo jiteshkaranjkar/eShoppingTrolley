@@ -8,6 +8,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.0.1] - 2021-05-09
 ### Initial Commit
-- Application designed and developed by [@tylerfortune8](https://github.com/tylerfortune8).
+- Application designed and developed by [@JK](https://github.com/jiteshkaranjkar).
 - Added Projects like Presentaion, Domain, Services, Repository
 - Added Unit test and Integration project
