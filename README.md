@@ -49,16 +49,16 @@ eShoppingTrolley is a Single Page Application to demostrate the use case scenari
 - Domain - This is the Domain centric with no implementation and just Entities.
 - Services - Application Service layer which implements contracts and abstracts calls to Repository layer.
 - Repository - A Persitence layer with the idea of abstracting the data access concerns and option to use preferred data access technology. 
-- Tests - Unit Test using xUnit.net, Moq and InMemoryDatabase for more efficient unit testing and used TestHost for TestFixture. Unit test for React app is pending.
-- Application deployed in Azure (Done) - https://tgifdrinks.azurewebsites.net/
-- Have built a dashboard to monitor services and application (Done).
+- Tests - Unit & Integration tests using xUnit.net, Moq and InMemoryDatabase for more efficient unit testing and used TestHost for TestFixture. Unit test for React app is pending.
+- Application deployed in Azure - https://tgifdrinks.azurewebsites.net/
+- Have built a dashboard to monitor services and application.
 
 ## Application Results
 Application structure results in following:
 - Independent of Frameworks - Core should not be dependent on external frameworks such as Entity Framework
 - Testable - The logic within Core can be tested independently of anything external, such as UI, databases, servers. Without external dependencies, the tests are very simple to write.
 - Independent of UI - It is easy to swap out the Web UI for a Console UI, or Angular for Vue. Logic is contained within Core, so changing the UI will not impact logic.
-- Independent of Database - Initially you might choose SQL Server or Oracle, but soon we will all be switching to Cosmos DB
+- Independent of Database - You might choose SQL Server or Oracle, but as of now am using InMemoryDatabase for more efficient unit testing.
 - Independent of anything agency - Core simply doesn't know anything about the outside world
 
 ## Trolley User Stories
