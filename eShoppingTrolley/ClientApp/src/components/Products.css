@@ -18,11 +18,3 @@ h1 {
 h3 {
   display: inline;
 }
-
-PromotionAccordians {
-  align-items: flex-end;
-  justify-content: flex-end;
-  margin: auto;
-  display: flex;
-  flex: 1;
-}

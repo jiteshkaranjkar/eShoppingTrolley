@@ -20,10 +20,33 @@ namespace eShoppingTrolleyTest.Services
     }
 
     [Fact]
-    public void Check_GetShoppingTrolley_ReturnsNull()
+    public void Check_GetProductById_WithTestData()
+    {
+      _mockProductRepository.Setup(prod => prod.GetProductById(1)).Returns(
+      new Product
+      {
+        Id = 1,
+        Name = It.IsAny<string>(),
+        Brand = It.IsAny<string>(),
+      });
+
+      Product product = _sutProductService.GetProductById(1);
+      Assert.Equal(1, product.Id);
+    }
+
+    [Fact]
+    public void Check_GetAllProducts_ReturnsNull()
     {
       List<Product> productList = _sutProductService.GetAllProducts();
       Assert.Null(productList);
+    }
+
+
+    [Fact]
+    public void Check_GetProductById_ReturnsNull()
+    {
+      Product product = _sutProductService.GetProductById(0);
+      Assert.Null(product);
     }
 
   }

@@ -1,4 +1,4 @@
-import React from 'react';
+  import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import ProductCard from './controls/ProductCard';
 import { Typography, Grid } from '@material-ui/core';
@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const Products = ({ onUpdateCount, trolleys }) => {
+const Products = ({ onUpdateCount, onAddToCart, trolleys }) => {
   const classes = useStyles();
   return (
     <div>
@@ -35,7 +35,7 @@ const Products = ({ onUpdateCount, trolleys }) => {
       <Grid container spacing={3}>
         {trolleys.map(trolley =>
           <Grid item xs={12} sm={6} md={3} key={trolley.product.id} >
-            <ProductCard key={trolley.product.id} shoppingItem={trolley} onUpdateCount={onUpdateCount} />
+            <ProductCard key={trolley.product.id} shoppingItem={trolley} onAddToCart={onAddToCart} onUpdateCount={onUpdateCount} />
           </Grid>
         )}
       </Grid>

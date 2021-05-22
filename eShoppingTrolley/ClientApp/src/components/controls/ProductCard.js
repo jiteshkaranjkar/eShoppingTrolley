@@ -8,6 +8,7 @@ import ImageC from '../../data/Coopers.jpg';
 import ImageCL from '../../data/CrownLager.jpg';
 import ImageTED from '../../data/TooheysExtraDry.jpg';
 import ImageVB from '../../data/VictoriaBitter.jpg';
+import history from '../history';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -95,7 +96,6 @@ const ProductCard = (props) => {
     setItemCount(Number(localStorage.getItem(props.shoppingItem.product.id)));
   }
 
-
   const getCardMedia = (product) => {
     let img;
     switch (product.id) {
@@ -135,6 +135,9 @@ const ProductCard = (props) => {
     props.onUpdateCount(-1);
   }
 
+  const addToCart = () => {
+    props.onAddToCart();
+  }
 
   return (
     <Fragment>
@@ -184,7 +187,7 @@ const ProductCard = (props) => {
               <AddCircleOutlineIcon style={{ fontSize: 35 }} color="action" aria-label="add" className={classes.icons} />
             </IconButton>
           </CardActions>
-          <Button variant="outlined" color="primary" className={classes.addToCart}>
+        <Button variant="outlined" color="primary" className={classes.addToCart} onClick={() => addToCart()}>
             <Typography variant="overline" display="block" style={{ fontWeight: 750 }} gutterBottom >
               Add to cart
         </Typography>
